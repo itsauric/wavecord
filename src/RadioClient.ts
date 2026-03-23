@@ -183,7 +183,16 @@ export class RadioClient extends EventEmitter {
 	 * Returns whether a station is currently playing in the given guild.
 	 */
 	public isPlaying(guildId: string): boolean {
-		return this.guilds.get(guildId)?.station !== null
+		const state = this.guilds.get(guildId)
+		return state != null && state.station !== null
+	}
+
+	/**
+	 * Returns whether the bot has an active voice connection in the given guild,
+	 * regardless of whether a station is currently streaming.
+	 */
+	public hasConnection(guildId: string): boolean {
+		return this.guilds.has(guildId)
 	}
 
 	/**
