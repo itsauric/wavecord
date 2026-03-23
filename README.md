@@ -4,12 +4,12 @@ A modern Discord radio client for discord.js v14. Search and stream from 500,000
 
 ## Features
 
-- **500k+ stations** — search by name, country, language, genre, codec, and bitrate
-- **TypeScript-first** — full type exports, no `any`
-- **Multi-guild** — independent state per server
-- **Auto-reconnect** — handles stream interruptions gracefully
-- **Volume control** — per-guild volume, configurable default
-- **Standalone** — uses `@discordjs/voice` directly, no extra frameworks required
+- **500k+ stations** - search by name, country, language, genre, codec, and bitrate
+- **TypeScript-first** - full type exports, no `any`
+- **Multi-guild** - independent state per server
+- **Auto-reconnect** - handles stream interruptions gracefully
+- **Volume control** - per-guild volume, configurable default
+- **Standalone** - uses `@discordjs/voice` directly, no extra frameworks required
 
 ## Requirements
 
@@ -163,7 +163,7 @@ client.on('interactionCreate', async (interaction) => {
   }
 
   const station = await radio.play(voiceChannel, stations[0])
-  return interaction.editReply(`Now playing: **${station.name}** — ${station.country} (${station.codec} ${station.bitrate}kbps)`)
+  return interaction.editReply(`Now playing: **${station.name}** - ${station.country} (${station.codec} ${station.bitrate}kbps)`)
 })
 ```
 
