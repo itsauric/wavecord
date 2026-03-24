@@ -113,6 +113,7 @@ All fields in `SearchOptions` are optional:
 | `getVolume(guildId)` | `number` | Get current volume |
 | `currentStation(guildId)` | `Station \| null` | Currently playing station |
 | `isPlaying(guildId)` | `boolean` | Whether a station is active |
+| `hasConnection(guildId)` | `boolean` | Whether a voice connection exists |
 
 ### Events
 
