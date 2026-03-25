@@ -23,8 +23,6 @@ export interface Station {
 	favicon: string | undefined
 	/** Community vote count */
 	votes: number
-	/** Whether the station uses HLS (HTTP Live Streaming) */
-	isHls: boolean
 }
 
 export interface SearchOptions {

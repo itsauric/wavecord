@@ -86,11 +86,12 @@ export class RadioClient extends EventEmitter {
 						entersState(connection, VoiceConnectionStatus.Signalling, 5_000),
 						entersState(connection, VoiceConnectionStatus.Connecting, 5_000)
 					])
-				} catch {
+				} catch (error) {
 					const currentStation = this.guilds.get(guildId)?.station
 					connection.destroy()
 					this.guilds.delete(guildId)
 					if (currentStation) this.emit('stationEnd', currentStation, guildId)
+					this.emit('error', error as Error, guildId)
 				}
 			})
 

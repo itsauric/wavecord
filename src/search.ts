@@ -24,8 +24,7 @@ function normalize(raw: RBStation): Station {
 		language: Array.isArray(raw.language) ? raw.language[0] ?? '' : raw.language,
 		tags: Array.isArray(raw.tags) ? raw.tags : [],
 		favicon: raw.favicon || undefined,
-		votes: raw.votes,
-		isHls: raw.hls === true
+		votes: raw.votes
 	}
 }
 
